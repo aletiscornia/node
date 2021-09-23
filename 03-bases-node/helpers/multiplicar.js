@@ -4,7 +4,7 @@ const colors = require('colors');
 const argv = require('../config/yargs');
 
 
-const crearArchivo = async(base = 5, listar) => {
+const crearArchivo = async(base = 5, listar, hasta = 10) => {
 
     try {
         
@@ -13,9 +13,11 @@ const crearArchivo = async(base = 5, listar) => {
         console.log('================'.rainbow); 
 
         let salida = '';
+        let consola = '';
 
-        for(let i = 1; i <= `${argv.h}`; i++){
-            salida += (`${base} x ${i} = ${base * i}\n`).rainbow;
+        for(let i = 1; i <= `${hasta}`; i++){
+            salida += `${base} x ${i} = ${base * i}\n`;
+            consola += (`${base} x ${i} = ${base * i}\n`).rainbow;
         }
         
         if(listar != true){

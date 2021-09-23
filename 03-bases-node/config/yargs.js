@@ -13,9 +13,10 @@ const argv = require('yargs')
                     default: false,
                     describe: 'Muestra la tabla en consola'
                 })
-                .option('h',{
+                .option('h', {
                     alias: 'hasta',
                     type: 'number',
+                    default: 10,
                     demandOption: false,
                     describe: 'Muestra el largo de la tabla'
                 })
